@@ -1,0 +1,42 @@
+{
+  "modules": {
+    "seneca-cron": {
+      "name": "seneca-cron",
+      "github": "https://github.com/mirceaalexandru/seneca-cron",
+      "npm": "seneca-cron",
+      "node": [
+        "4",
+        "5"
+      ]
+    },
+    "seneca-sm": {
+      "name": "seneca-sm",
+      "github": "https://github.com/mirceaalexandru/seneca-sm",
+      "npm": "seneca-sm",
+      "node": [
+        "4",
+        "4.4.2"
+      ]
+    },
+    "seneca-user": {
+      "name": "seneca-user",
+      "github": "https://github.com/senecajs/seneca-user",
+      "npm": "seneca-user",
+      "node": [
+        "0.12",
+        "4",
+        "5"
+      ]
+    }
+  },
+  "libraries": {
+    "seneca": {
+      "github": "https://github.com/senecajs/seneca",
+      "npm": "seneca",
+      "versions": [
+        "1.2.0",
+        "1.4.0"
+      ]
+    }
+  }
+}
