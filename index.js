@@ -191,17 +191,22 @@ function printResult(moduleName, err, result){
     for (var i in result){
       var res = result[i]
 
-      console.log('\n\n')
-      console.log(`ModuleName: ${res.configuration.moduleName}`)
-      console.log(`Node version: ${res.configuration.nodeVersion}`)
-      console.log(`Seneca version: ${res.configuration.senecaVersion}`)
-      console.log(`Docker image: ${res.build ? res.build.dockerImage : undefined}`)
-      console.log(`Init result: ${res.init.status}`)
-      console.log(`Build result: ${res.build.status}`)
-      console.log(`Run result: ${res.run.status}`)
+      let message =
+        `
+        ModuleName: ${res.configuration.moduleName}
+        Node version: ${res.configuration.nodeVersion}
+        Seneca version: ${res.configuration.senecaVersion}
+        Docker image: ${res.build ? res.build.dockerImage : undefined}
+        Init result: ${res.init.status}
+        Build result: ${res.build.status}
+        Run result: ${res.run.status}`
 
       if (res.run.status === 'ERROR'){
-        console.log(`HINT: To see the error please run this from console:\n$ docker run ${res.build.dockerImage}`)
+        console.log(message)
+        console.log('HINT: To see the error please run this from console:\n$ docker run ' + res.build.dockerImage)
+      }
+      else{
+        console.log(message)
       }
     }
   }
